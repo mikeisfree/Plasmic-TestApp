@@ -1,0 +1,63 @@
+/* Styles for BentoButterfliesPage */
+.mainContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* To contain butterflies */
+}
+
+.canvasContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Behind the bento grid */
+}
+
+.bentoGrid {
+  position: relative;
+  z-index: 1; /* Above the canvas */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: 100%; /* Make grid take full height to center cards if fewer */
+  align-items: center; /* Vertically center cards in grid area */
+  justify-content: center; /* Horizontally center cards */
+}
+
+.bentoCard {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for glassmorphism base */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border-radius: 15px; /* Cartoony feel */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Subtle shadow */
+  padding: 20px;
+  color: #333; /* Darker text for readability on light background */
+  min-height: 150px; /* Example height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bentoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+/* Example of individual card styling (optional for now) */
+.card1 {
+  /* grid-column: span 2; */ /* Example: if you want this card to be wider */
+}
+
+.card2 {
+  /* Additional styles for card2 if needed */
+}
+
+.card3 {
+  /* Additional styles for card3 if needed */
+}
+
+.card4 {
+  /* Additional styles for card4 if needed */
+}
